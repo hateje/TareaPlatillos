@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Sem08</string>
+    <string name="tv_correo">Correo</string>
+    <string name="tv_clave">Contraseña</string>
+    <string name="title_activity_principal">Principal</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_lugar">Lugares</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="msg_nombre">Nombre del lugar</string>
+    <string name="msg_imagen">Imagen del lugar</string>
+    <string name="msg_correo">Correo (elcorreo@xxx.xxx)</string>
+    <string name="msg_telefono">Telefono (9999-9999)</string>
+    <string name="msg_web">Sitio Web</string>
+    <string name="bt_addLugar">Agregar Lugar</string>
+    <string name="msg_lugar_added">Lugar Agregado</string>
+    <string name="msg_data">Faltan datos!!!</string>
+
+    <string name="menu_home">Home</string>
+    <string name="msg_fallo">Falló</string>
+    <string name="msg_error">Revise los datos</string>
+    <string name="msg_exito">Lugar Guardado Exitosamente</string>
+</resources>
