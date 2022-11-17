@@ -8,16 +8,16 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import com.example.sem08.R
-import com.example.sem08.databinding.FragmentAddLugarBinding
+import com.example.sem08.databinding.FragmentAgregarLugarBinding
 import com.example.sem08.model.Lugar
 import com.example.sem08.viewmodel.HomeViewModel
 
 
 class AddLugar : Fragment() {
 
-    private var _binding: FragmentAddLugarBinding?= null
+    private var _binding: FragmentAgregarLugarBinding?= null
     private val binding get()= _binding!!
-    private lateinit var homeViewModel: HomeViewModel
+    private lateinit var lugarViewModel: HomeViewModel
 
 
 
@@ -25,8 +25,8 @@ class AddLugar : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        homeViewModel = ViewModelProvider(this).get(homeViewModel::class.java)
-        _binding = FragmentAddLugarBinding.inflate(inflater,container,false)
+        lugarViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
+        _binding = FragmentAgregarLugarBinding.inflate(inflater,container,false)
         binding.btAgregarLugar.setOnClickListener{agregarLugar()}
 
         // Inflate the layout for this fragment
@@ -42,7 +42,7 @@ class AddLugar : Fragment() {
         if (nombre.isNotEmpty()){
             val lugar = Lugar(0,nombre,correo,telefono,web)
             //Proceso de agregar BD
-            homeViewModel.saveLugar(lugar)
+            lugarViewModel.saveLugar(lugar)
             Toast.makeText(requireContext(),getString(R.string.msg_exito),Toast.LENGTH_LONG).show()
         }else{
             Toast.makeText(requireContext(),getString(R.string.msg_error),Toast.LENGTH_LONG).show()

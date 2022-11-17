@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".AddLugar">
+    tools:context="ui.home.UpdateLugarFragment">
 
     <EditText
         android:id="@+id/et_Nombre"
@@ -41,8 +41,8 @@
         android:text="@string/msg_web" />
 
     <Button
-        android:id="@+id/bt_agregarLugar"
+        android:id="@+id/bt_update_lugar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bt_addLugar" />
+        android:text="@string/bt_update_lugar" />
 </LinearLayout>
