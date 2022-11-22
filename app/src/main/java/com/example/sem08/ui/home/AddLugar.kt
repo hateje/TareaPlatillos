@@ -28,6 +28,8 @@ class AddLugar : Fragment() {
         lugarViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentAgregarLugarBinding.inflate(inflater,container,false)
         binding.btAgregarLugar.setOnClickListener{agregarLugar()}
+        //Botón eliminar Lugar, tarea semana 10
+
 
         // Inflate the layout for this fragment
         return binding.root

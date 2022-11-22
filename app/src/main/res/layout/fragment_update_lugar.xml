@@ -45,4 +45,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/bt_update_lugar" />
+
+    <Button
+        android:id="@+id/bt_delete_lugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bt_deleteLugar" />
 </LinearLayout>
