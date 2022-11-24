@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
             reciclador.adapter = lugarAdapter
             reciclador.layoutManager = LinearLayoutManager(requireContext())
 
-        homeViewModel.obtenerLugares.observe(viewLifecycleOwner){
+        homeViewModel.getLugares.observe(viewLifecycleOwner){
             lugares -> lugarAdapter.setLugares(lugares)
         }
 

@@ -24,7 +24,7 @@ android {
     defaultConfig {
         applicationId "com.example.sem08"
         minSdk 27
-        targetSdk 32
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
@@ -68,9 +68,12 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
 
     //SQLite y ROOM
-    annotationProcessor 'androidx.room:room-compiler:2.4.3'
-    kapt 'androidx.room:room-compiler:2.4.3'
-    implementation 'androidx.room:room-ktx:2.4.3'
+    //annotationProcessor 'androidx.room:room-compiler:2.4.3'
+    //kapt 'androidx.room:room-compiler:2.4.3'
+    //implementation 'androidx.room:room-ktx:2.4.3'
+
+    //Firebase Database
+    implementation 'com.google.firebase:firebase-firestore-ktx'
 
     //Fragmentos
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'

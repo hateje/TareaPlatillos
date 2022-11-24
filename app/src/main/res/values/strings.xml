@@ -33,4 +33,6 @@
     <string name="msg_lugar_updated">Lugar Actualizado Exitosamente</string>
     <string name="bt_deleteLugar">Eliminar Lugar</string>
     <string name="msg_lugarBorrado">Lugar ha sido borrado</string>
+    <string name="todo">To DO</string>
+    <string name="msgEscucharAudio">Escuchar Audio</string>
 </resources>
