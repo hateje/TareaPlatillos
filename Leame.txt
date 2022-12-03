@@ -1,0 +1,3 @@
+Este es el git para la tarea de la semana 12. Listar platillos de un restaurante.
+Se toma como base el proyecto de sem08, se modifican la cantidad de campos de la base de datos en firebase, asi como los nombres de los campos para que se ajusten al 
+nuevo requerimiento. Se modifican los fomularios de agregar y modificar platillos.
