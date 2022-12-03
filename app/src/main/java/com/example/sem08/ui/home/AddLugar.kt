@@ -27,8 +27,8 @@ class AddLugar : Fragment() {
     ): View? {
         lugarViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentAgregarLugarBinding.inflate(inflater,container,false)
-        binding.btAgregarLugar.setOnClickListener{agregarLugar()}
-        //Botón eliminar Lugar, tarea semana 10
+        binding.btAgregarPlatillo.setOnClickListener{agregarLugar()}
+
 
 
         // Inflate the layout for this fragment
@@ -37,15 +37,15 @@ class AddLugar : Fragment() {
 
     private fun agregarLugar() {
         val nombre = binding.etNombre.text.toString()
-        val correo = binding.etEmail.text.toString()
-        val telefono = binding.etTelefono.text.toString()
-        val web = binding.etWeb.text.toString()
+        val descripcion = binding.etDescripcion.text.toString()
+        val precio = binding.etPrecio.text.toString()
+        //val web = binding.etWeb.text.toString()
 
         if (nombre.isNotEmpty()){
-            val lugar = Lugar("",nombre,correo,telefono,web)
+            val lugar = Lugar("",nombre,descripcion,precio)
             //Proceso de agregar BD
             lugarViewModel.saveLugar(lugar)
-            Toast.makeText(requireContext(),getString(R.string.msg_exito),Toast.LENGTH_LONG).show()
+            Toast.makeText(requireContext(),getString(R.string.msg_exitoPlatillo),Toast.LENGTH_LONG).show()
         }else{
             Toast.makeText(requireContext(),getString(R.string.msg_error),Toast.LENGTH_LONG).show()
         }

@@ -14,37 +14,29 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/msg_nombre" />
+        android:text="@string/msg_nombre_Platillo" />
 
     <EditText
-        android:id="@+id/et_Email"
+        android:id="@+id/et_Descripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/msg_correo" />
+        android:text="@string/msg_descripcion_PLatillo" />
 
     <EditText
-        android:id="@+id/et_Telefono"
+        android:id="@+id/et_Precio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/msg_telefono" />
-
-    <EditText
-        android:id="@+id/et_Web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/msg_web" />
+        android:text="@string/msg_Precio" />
 
     <Button
-        android:id="@+id/btAgregarLugar"
+        android:id="@+id/btAgregarPlatillo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bt_addLugar" />
+        android:text="@string/bt_addPlatillo" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -61,70 +53,6 @@
         android:textAlignment="center"
         android:visibility="gone" />
 
-
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/bt_accion"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_mic"
-            tools:ignore="DuplicateSpeakableTextCheck" />
-
-        <ImageButton
-            android:id="@+id/bt_play"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_play" />
-
-        <ImageButton
-            android:id="@+id/bt_delete"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_delete" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/bt_photo"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_photo" />
-
-        <ImageButton
-            android:id="@+id/bt_rota_l"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_rotate_l" />
-
-        <ImageButton
-            android:id="@+id/bt_rota_r"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:contentDescription="@string/todo"
-            android:src="@drawable/ic_rotate_r" />
-    </LinearLayout>
 
     <ImageView
         android:id="@+id/imagen"

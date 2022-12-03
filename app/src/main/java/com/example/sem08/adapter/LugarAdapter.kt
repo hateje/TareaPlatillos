@@ -12,26 +12,26 @@ import com.example.sem08.ui.home.UpdateLugarFragmentDirections
 
 class LugarAdapter: RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
 
-    private var listaLugares = emptyList<Lugar>()
+    private var listaPlatillos = emptyList<Lugar>()
 
     inner class LugarViewHolder( private val itemBinding: FragmentLugarFilaBinding): RecyclerView.ViewHolder(itemBinding.root){
-        fun dibujar(lugar: Lugar){
-            itemBinding.tvNombre.text = lugar.nombre
-            itemBinding.tvTelefono.text = lugar.telefono
-            itemBinding.tvCorreo.text = lugar.correo
+        fun dibujar(platillo: Lugar){
+            itemBinding.tvNombre.text = platillo.nombre
+            itemBinding.tvDescripcion.text = platillo.descripcion
+            itemBinding.tvPrecio.text = platillo.precio
 
             //Evento edit
             itemBinding.vistaFila.setOnClickListener{
                 val accion = HomeFragmentDirections
-                    .actionNavHomeToUpdateLugarFragment(lugar)
+                    .actionNavHomeToUpdateLugarFragment(platillo)
                 itemView.findNavController().navigate(accion)
             }
         }
     }
 
     //Función para llenar la lista
-    fun setLugares(lugares : List<Lugar>){
-        listaLugares = lugares
+    fun setPLatillos(platillos : List<Lugar>){
+        listaPlatillos = platillos
         notifyDataSetChanged()
     }
 
@@ -45,12 +45,12 @@ class LugarAdapter: RecyclerView.Adapter<LugarAdapter.LugarViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: LugarViewHolder, position: Int) {
-        val lugar = listaLugares[position]
-        holder.dibujar(lugar)
+        val platillo = listaPlatillos[position]
+        holder.dibujar(platillo)
     }
 
     override fun getItemCount(): Int {
-        return listaLugares.size
+        return listaPlatillos.size
     }
 
 

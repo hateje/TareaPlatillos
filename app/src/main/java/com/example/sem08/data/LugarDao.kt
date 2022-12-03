@@ -24,26 +24,26 @@ class LugarDao {
     }
 
     //Insert
-     fun saveLugar(lugar: Lugar){
+     fun savePlatillo(platillo: Lugar){
         val document: DocumentReference
-        if (lugar.id.isEmpty()){
+        if (platillo.id.isEmpty()){
             //Proceso de agregar
             document = firestore.
-                    collection("lugaresMiercoles").
+                    collection("platillosMiercoles").
                     document(codigoUsuario).
-                    collection("misLugares").
+                    collection("misPLatillos").
                     document()
-            lugar.id= document.id
+            platillo.id= document.id
         }
         else{
             //modificar lugar
             document = firestore.
-            collection("lugaresMiercoles").
+            collection("platillosMiercoles").
             document(codigoUsuario).
-            collection("misLugares").
-            document(lugar.id)
+            collection("misPLatillos").
+            document(platillo.id)
         }
-        document.set(lugar) //el método set es el que hace el update o insert
+        document.set(platillo) //el método set es el que hace el update o insert
             .addOnCompleteListener{
                 Log.d("SaveLugar","Guardado con éxito")
             }
@@ -54,13 +54,13 @@ class LugarDao {
 
     //Delete
 
-     fun deleteLugar(lugar: Lugar){
-        if (lugar.id.isNotEmpty()){
+     fun deletePlatillo(platillo: Lugar){
+        if (platillo.id.isNotEmpty()){
             firestore.
-                    collection("lugaresMiercoles").
+                    collection("platillosMiercoles").
                     document(codigoUsuario).
-                    collection("misLugares").
-                    document(lugar.id).delete().
+                    collection("misPLatillos").
+                    document(platillo.id).delete().
                 addOnCompleteListener{
                     Log.d("deleteLugar","Eliminado con éxito")
                 }
@@ -72,12 +72,12 @@ class LugarDao {
 
     //Obtener datos
 
-    fun obtenerLugares(): MutableLiveData<List<Lugar>> {
-        val listaLugares = MutableLiveData<List<Lugar>>()
+    fun obtenerPlatillos(): MutableLiveData<List<Lugar>> {
+        val listaPLatillos = MutableLiveData<List<Lugar>>()
         firestore.
-        collection("lugaresMiercoles").
+        collection("platillosMiercoles").
         document(codigoUsuario).
-        collection("misLugares").
+        collection("misPLatillos").
                 addSnapshotListener{snapshot,e ->
                     if(e != null){
                         return@addSnapshotListener
@@ -91,10 +91,10 @@ class LugarDao {
                                 lista.add(lugar)
                             }
                         }
-                        listaLugares.value= lista
+                        listaPLatillos.value= lista
                     }
                 }
-        return listaLugares
+        return listaPLatillos
     }
 
 }

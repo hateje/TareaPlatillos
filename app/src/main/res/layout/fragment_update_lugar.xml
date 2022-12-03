@@ -14,51 +14,36 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/msg_nombre" />
+        android:text="@string/msg_nombre_Platillo" />
 
     <EditText
-        android:id="@+id/et_Email"
+        android:id="@+id/et_Descripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/msg_correo" />
+        android:text="@string/msg_descripcion_PLatillo" />
 
     <EditText
-        android:id="@+id/et_Telefono"
+        android:id="@+id/et_Precio"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="@string/msg_telefono" />
+        android:text="@string/msg_Precio" />
 
-    <EditText
-        android:id="@+id/et_Web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/msg_web" />
 
     <Button
-        android:id="@+id/bt_update_lugar"
+        android:id="@+id/bt_update_platillo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bt_update_lugar" />
+        android:text="@string/bt_update_platillo" />
 
     <Button
-        android:id="@+id/bt_delete_lugar"
+        android:id="@+id/bt_delete_platillo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/bt_deleteLugar" />
-
-    <ImageButton
-        android:id="@+id/btPlay"
-        android:layout_width="367dp"
-        android:layout_height="57dp"
-        android:layout_weight="1"
-        android:contentDescription="@string/msgEscucharAudio"
-        android:src="@drawable/ic_play" />
+        android:text="@string/bt_delete_platillo" />
 
     <ImageView
         android:id="@+id/imagen"

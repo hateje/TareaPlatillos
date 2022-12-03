@@ -38,47 +38,47 @@ class UpdateLugarFragment : Fragment() {
 
         //Cargar los valores edit
         binding.etNombre.setText(args.lugar.nombre)
-        binding.etTelefono.setText(args.lugar.telefono)
-        binding.etEmail.setText(args.lugar.correo)
-        binding.etWeb.setText(args.lugar.web)
+        binding.etDescripcion.setText(args.lugar.descripcion)
+        binding.etPrecio.setText(args.lugar.precio)
+        //binding.etWeb.setText(args.lugar.web)
 
-        binding.btUpdateLugar.setOnClickListener{updateLugar()}
+        binding.btUpdatePlatillo.setOnClickListener{updatePlatillo()}
 
         //Binging del botón eliminar lugar, tarea semana 10
-        binding.btDeleteLugar.setOnClickListener { deleteLugar() }
+        binding.btDeletePlatillo.setOnClickListener { deletePlatillo() }
 
         // Inflate the layout for this fragment
         return binding.root
     }
 
     //Función para eliminar el lugar, tarea semana 10
-    private fun deleteLugar() {
+    private fun deletePlatillo() {
         val nombre = binding.etNombre.text.toString()
-        val telefono = binding.etTelefono.text.toString()
-        val correo = binding.etEmail.text.toString()
-        val web = binding.etWeb.text.toString()
+        val descripcion = binding.etDescripcion.text.toString()
+        val precio = binding.etPrecio.text.toString()
+        //val web = binding.etWeb.text.toString()
 
-            val lugar = Lugar(args.lugar.id,nombre,correo,web,telefono)
-            homeViewModel.deleteLugar(lugar)
-            Toast.makeText(requireContext(),getString(R.string.msg_lugarBorrado),Toast.LENGTH_LONG).show()
+            val platillo = Lugar(args.lugar.id,nombre,descripcion,precio)
+            homeViewModel.deleteLugar(platillo)
+            Toast.makeText(requireContext(),getString(R.string.msg_platilloBorrado),Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateLugarFragment_to_nav_home)
 
     }
 
-    private fun updateLugar() {
+    private fun updatePlatillo() {
         val nombre = binding.etNombre.text.toString()
-        val telefono = binding.etTelefono.text.toString()
-        val correo = binding.etEmail.text.toString()
-        val web = binding.etWeb.text.toString()
+        val descripcion = binding.etDescripcion.text.toString()
+        val precio = binding.etPrecio.text.toString()
+        //val web = binding.etWeb.text.toString()
         if (nombre.isEmpty()){
             Toast.makeText(requireContext(),getString(R.string.msg_data),Toast.LENGTH_LONG).show()
         }
-        else if (correo.isEmpty()){
+        else if (descripcion.isEmpty()){
             Toast.makeText(requireContext(),getString(R.string.msg_data),Toast.LENGTH_LONG).show()
         }
         else{
-            val lugar = Lugar(args.lugar.id,nombre,correo,web,telefono)
-            homeViewModel.saveLugar(lugar)
+            val platillo = Lugar(args.lugar.id,nombre,descripcion,precio)
+            homeViewModel.saveLugar(platillo)
             Toast.makeText(requireContext(),getString(R.string.msg_lugar_updated),Toast.LENGTH_LONG).show()
             findNavController().navigate(R.id.action_updateLugarFragment_to_nav_home)
         }

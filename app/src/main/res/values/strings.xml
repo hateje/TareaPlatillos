@@ -35,4 +35,12 @@
     <string name="msg_lugarBorrado">Lugar ha sido borrado</string>
     <string name="todo">To DO</string>
     <string name="msgEscucharAudio">Escuchar Audio</string>
+    <string name="msg_nombre_Platillo">Nombre del platillo</string>
+    <string name="msg_descripcion_PLatillo">Descripcion del platillo</string>
+    <string name="msg_Precio">Precio</string>
+    <string name="bt_addPlatillo">Agregar Platillo</string>
+    <string name="bt_update_platillo">Actualizar Platillo</string>
+    <string name="bt_delete_platillo">Eliminar Platillo</string>
+    <string name="msg_exitoPlatillo">Platillo Guardado!</string>
+    <string name="msg_platilloBorrado">Platillo Borrado</string>
 </resources>

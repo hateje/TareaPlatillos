@@ -13,11 +13,11 @@ data class Lugar(
 
     var id: String,
     val nombre: String,
-    val correo: String,
-    val telefono: String,
-    val web: String
+    val descripcion: String,
+    val precio: String,
+    //val web: String
 
 ): Parcelable{
     constructor():
-            this ("","","","","")
+            this ("","","","")
 }

@@ -32,8 +32,8 @@
     <fragment
         android:id="@+id/addLugar"
         android:name="com.example.sem08.ui.home.AddLugar"
-        android:label="fragment_add_lugar2"
-        tools:layout="@layout/fragment_agregar_lugar" >
+        android:label="Agregar Platillos"
+        tools:layout="@layout/fragment_agregar_lugar">
         <action
             android:id="@+id/action_addLugar_to_nav_home"
             app:destination="@id/nav_home" />
@@ -41,8 +41,8 @@
     <fragment
         android:id="@+id/updateLugarFragment"
         android:name="com.example.sem08.ui.home.UpdateLugarFragment"
-        android:label="fragment_update_lugar"
-        tools:layout="@layout/fragment_update_lugar" >
+        android:label="Actualizar Platillos"
+        tools:layout="@layout/fragment_update_lugar">
         <action
             android:id="@+id/action_updateLugarFragment_to_nav_home"
             app:destination="@id/nav_home" />
